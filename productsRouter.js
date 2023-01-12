@@ -59,7 +59,7 @@ productsRouter.put("/:id", (req, res) => {
 	}
 
 	if(isNaN(req.params.id)) {
-		res.status(400).send("El ID del Producto deber ser numerico!")
+		res.status(400).send("El ID del Producto deber ser numerico!");
 	}
 
 	let actualizacion = productManager.updateProduct(req.params.id, req.body);
