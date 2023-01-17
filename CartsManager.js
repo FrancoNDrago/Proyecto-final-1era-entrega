@@ -107,9 +107,9 @@ class CartsManager{
 	_get_last_id() {
 		let ultimoId = 0;
 
-		if (!this.carts.length) return -1;
+		if (!this.productos.length) return -1;
 
-		return this.carts[this.carts.length - 1].id;
+		return this.productos[this.productos.length - 1].id;
 	}
 }
 
