@@ -40,7 +40,7 @@ class CartsManager{
 		
 		if (!productManager.existeIdProducto(productId)) return {status: false, message: `No existe el product con ID: ${productId}`};
 
-		if (quantity <= 0) return {status: false, message: 'La cantidad de unidades a agregar debe ser mayor a cero'};
+		if (quantity <= 0) return {status: false, message: "La cantidad de unidades a agregar debe ser mayor a cero"};
 
 		let producto = productManager.getProductById(productId);
 
