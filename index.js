@@ -3,8 +3,8 @@ const app = express();
 
 const PORT = 8080;
 
-const {productsRouter} = require("./routers/productsRouter");
-const {cartsRouter} = require("./routers/cartsRouter");
+const {productsRouter} = require("./productsRouter");
+const {cartsRouter} = require("./cartsRouter");
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
