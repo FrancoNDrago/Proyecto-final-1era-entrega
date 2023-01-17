@@ -4,11 +4,11 @@ const {CartsManager} = require("../CartsManager");
 const cartsManager = new CartsManager();
 
 cartsRouter.post("/", (req,res) => {
-	if (!req.body.productos) {
+	if (!req.body) {
 		res.status(400).send("No se encuentran los productos del carrito");
 	}
 
-	let guardado = cartsManager.addCart(req.body.productos);
+	let guardado = cartsManager.addCart(req.body);
 
 	if (guardado.status) {
 		res.send("Carrito guardado!");
