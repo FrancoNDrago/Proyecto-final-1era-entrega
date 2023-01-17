@@ -25,7 +25,7 @@ class ProductManager {
 
         if (this.existeProducto(producto)) throw `Este producto ya existe (${producto.title})`;
 
-        producto.id = this.get_last_id() + 1;
+        producto.id = this._get_last_id() + 1;
 
         this.productos.push(producto);
 
