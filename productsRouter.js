@@ -39,7 +39,7 @@ productsRouter.get("/:id", (req, res) => {
 });
 
 productsRouter.post("/", (req, res) => {
-	let producto = req.body.producto;
+	let producto = req.body;
 	let response = productManager.addProduct(producto);
 
 	if (response.status) {
@@ -58,8 +58,8 @@ productsRouter.put("/:id", (req, res) => {
 		res.status(400).send("No se recibió el body");
 	}
 
-	if(isNaN(req.params.id)) {
-		res.status(400).send("El ID del Producto deber ser numerico!");
+	if (isNaN(req.params.id)) {
+	res.status(400).send("El ID del Producto deber ser numerico!");
 	}
 
 	let actualizacion = productManager.updateProduct(req.params.id, req.body);
