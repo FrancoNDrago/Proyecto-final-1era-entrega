@@ -1,4 +1,4 @@
-const DEFAULT_PATH = "./database/products.json";
+const DEFAULT_PATH = "./products.json";
 const {FileManager} = require("./FileManager");
 const fm = new FileManager();
 
