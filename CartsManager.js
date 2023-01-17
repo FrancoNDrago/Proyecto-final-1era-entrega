@@ -36,7 +36,7 @@ class CartsManager{
 	{
 		this.carts = fm.leerArchivo(this._path);
 
-		if (!this.existeCart(cartId)) return {status: false, message: `El carrito con ID: ${cartId} no existe`};
+		if (!this.existeCart(cartId)) return {status: false, message: `No existe el carrito con ID: ${cartId}`};
 		
 		if (!productManager.existeIdProducto(productId)) return {status: false, message: `No existe el product con ID: ${productId}`};
 
